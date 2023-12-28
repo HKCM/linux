@@ -12,9 +12,12 @@ vim +/"so cute" file    # 打开文件patten所在位置
 
 `~/.vimrc` 配置文件
 
-显示号: :set nu
+## 命令模式
+显示行号: :set nu
 保存退出: `:wq` `ZZ`
 取消未保存的修改: `:e!`
+替换第十三行第一个erg: `:13s/erg/aaa`
+
 
 
 左: h
