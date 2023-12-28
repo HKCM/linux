@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # keyword: memory 检查内存 
 # 获取可用内存（以兆字节为单位）
 available_memory=$(free -m | awk '/^Mem:/ {print $7}')

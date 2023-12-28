@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # keyword: 用户判断 判断执行用户 check user
 
 if [ $UID -eq 0 ]; then

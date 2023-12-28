@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # author: karl
 # version: 1
@@ -18,7 +18,7 @@ DEFAULT=2
 # # Put this script together with your script and
 # # source it from your script here is an example
 #
-# #!/bin/bash
+# #!/usr/bin/env bash
 # # Setup log level
 # # DEBUG=1
 # # INFO=2

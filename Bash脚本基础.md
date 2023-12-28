@@ -87,7 +87,7 @@ chsh -s /bin/zsh
 ```bash
 #!/bin/sh
 
-#!/bin/bash
+#!/usr/bin/env bash
 ```
 
 如果 Bash 解释器不放在目录`/bin`,脚本就无法执行了。为了保险,可以写成下面这样。
@@ -338,7 +338,7 @@ $ PATH=$PATH:.
 
 ```shell
 $ cat options.sh
-#!/bin/bash
+#!/usr/bin/env bash
 # extracting command line options as parameters #
 echo
 while [ -n "$1" ]
@@ -702,7 +702,7 @@ echo "The cost of the item is \$15"
 ### 数学运算
 shell数学运算符只支持整数运算
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 var1=100
 var2=50
 var3=45
@@ -813,7 +813,7 @@ NOT运算:符号!。
 
 ### if-elif-else
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 # Testing nested ifs - use elif & else #
 testuser=NoSuchUser
 #
@@ -849,7 +849,7 @@ case的匹配模式可以使用各种通配符,下面是一些例子。
 * *):匹配任意输入,通过作为case结构的最后一个模式。
 
 ```Shell
-#!/bin/bash
+#!/usr/bin/env bash
 
 read -r -p "Are You Sure? [Y/n] " input
 
@@ -869,7 +869,7 @@ esac
 
 ### while
 ```
-#!/bin/bash
+#!/usr/bin/env bash
 
 number=0
 while [ "$number" -lt 10 ]; do
@@ -886,7 +886,7 @@ christine,Christine Bresnahan
 barbara,Barbara Blum 
 tim,Timothy Bresnahan
 
-#!/bin/bash
+#!/usr/bin/env bash
 input=users.csv
 
 while IFS=',' read -r userid name
@@ -900,7 +900,7 @@ done < "$input"
 
 until循环与while循环恰好相反,只要不符合判断条件(判断条件失败),就不断循环执行指定的语句。一旦符合判断条件,就退出循环。
 ```
-#!/bin/bash
+#!/usr/bin/env bash
 
 number=0
 until [ "$number" -ge 10 ]; do
@@ -924,7 +924,7 @@ done
 ```
 
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
     # basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
@@ -947,7 +947,7 @@ done
 
 查找$PATH中的可执行文件
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 # finding files in the PATH
 IFS=: # 更改分隔符
 for folder in $PATH;do
@@ -962,7 +962,7 @@ done
 
 遍历参数
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 if [ $# -ne 5 ];then
   echo "需要5个参数"
   exit 2
@@ -976,7 +976,7 @@ done
 
 `break`命令立即终止循环,程序继续执行循环块之后的语句,即不再执行剩下的循环。
 ```
-#!/bin/bash
+#!/usr/bin/env bash
 
 for number in 1 2 3 4 5 6
 do
@@ -990,7 +990,7 @@ done
 
 `continue`命令立即终止本轮循环,开始执行下一轮循环。
 ```
-#!/bin/bash
+#!/usr/bin/env bash
 
 while read -p "What file do you want to test?" filename
 do
@@ -1007,7 +1007,7 @@ done
 
 `select`结构主要用来生成简单的菜单。它的语法与`for...in`循环基本一致。
 ```
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Which Operating System do you like?"
 
@@ -1031,7 +1031,7 @@ done
 ### shift
 ```shell
 $ cat shift.sh
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 
 count=1

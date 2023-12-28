@@ -11,7 +11,7 @@ env|grep ^HOME=|cut -c 6-
 ## 脚本参数设置
 ```shell
 $ cat options.sh
-#!/bin/bash
+#!/usr/bin/env bash
 # extracting command line options as parameters #
 echo
 while [ -n "$1" ]
@@ -63,7 +63,7 @@ echo "Hello ${WORD}"
 ## 脚本参数设置2
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 start() {
 echo "Starting vnc server with $resolution on Display $display"
 #your execute command here mine is below
@@ -247,7 +247,7 @@ logger -t ScriptName "Hello World"
 
 #### 检查文件是否存在
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 # Check if either a directory or file exists #
 location=$HOME
 file_name="sentinel"
@@ -312,7 +312,7 @@ $ ls -l /tmp/tmp.4GcsWSG4vj
 
 Bash 脚本使用`mktemp`命令的用法如下.为了确保临时文件创建成功,`mktemp`命令后面最好使用 `OR`运算符(||),保证创建失败时退出脚本。
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 
 TMPFILE=$(mktemp) || exit 1
 echo "Our temp file is $TMPFILE"
@@ -338,7 +338,7 @@ $ mktemp -t mytemp.XXXXXXX
 #### 执行时间
 
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 
 startTime=$(date +%Y/%m/%d-%H:%M:%S)
 startTime_s=$(date +%s)

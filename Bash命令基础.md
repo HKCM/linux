@@ -431,7 +431,7 @@ echo "This is an error" >&2  #特意将输出变为STDERR
 #### 永久重定向
 在脚本中添加 `exec 1>testout` 让脚本中所有的输出都重定向到testout
 ```shell
-#!/bin/bash
+#!/usr/bin/env bash
 # redirecting all output to a file
 exec 1>testout
 ```
@@ -444,7 +444,7 @@ echo "and this should be stored in the file" >&3
 示例
 ```shell
 $ cat test11
-#!/bin/bash
+#!/usr/bin/env bash
 # redirecting output to different locations
 exec 2>testerror
 echo "This is the start of the script"
@@ -464,7 +464,7 @@ but this should go to the testerror file
 用来处理日志文件很有帮助
 ```shell
  cat test12
-#!/bin/bash
+#!/usr/bin/env bash
 # redirecting file input
 exec 0< testfile
 count=1

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # github API 在未登录的情况下每小时只能调用60次
 
 LIST=$(cat <<EOF

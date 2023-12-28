@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # keyword: shell脚本的执行时间 runtime
 

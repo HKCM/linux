@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # keyword: 启动脚本
 
 if [ ${EUID:-${UID}} = 0 ]; then

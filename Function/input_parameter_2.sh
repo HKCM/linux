@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 # keyword: 启动脚本
 # 目前这个脚本是无法运行的需要修改Todo让程序能运行起来
