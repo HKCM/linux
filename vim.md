@@ -1,11 +1,14 @@
 # vim
 
-## 
-vim +n file // 打开文件第n行
-vim + file // 打开文件最后一行
-vim +/patten file // 打开文件patten所在位置
-vim +/"so cute" file // 打开文件patten所在位置
-
+## 打开文件
+```bash
+vim -R file             # 只读模式打开，可以:w!覆盖只读模式
+view file               # 只读模式打开，可以:w!覆盖只读模式
+vim +n file             # 打开文件第n行
+vim + file              # 打开文件最后一行
+vim +/patten file       # 打开文件patten所在位置
+vim +/"so cute" file    # 打开文件patten所在位置
+```
 
 `~/.vimrc` 配置文件
 
@@ -48,6 +51,8 @@ vim +/"so cute" file // 打开文件patten所在位置
 
 查找: /
 在一行中查找: fx
+一行中的下一个: ;
+一行中的上一个: ,
 
 ```
 vim -O abc 123 # 同时打开两个文件 ctrl + w 之后加左右箭头
